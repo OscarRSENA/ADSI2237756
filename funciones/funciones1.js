@@ -25,3 +25,5 @@ console.log(rta(20,5));
 // numero es  o no es primo
 // solicitar un valor que representeuna cantidad de dinero y un porcentaje de  descuento indicar el valor a pagar aplicando el descuento
 // solicitar una fecha determinar si la fecha es anterior actual o posterior al dia que se ejecute el programa (date js)
+// Leer documentacion de clases y objetos en javascript
+
