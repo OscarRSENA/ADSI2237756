@@ -78,14 +78,14 @@ var a = new Auto("chevrolet", "Spark", 120, 4 )
 console.log(a.tanquear(12))
 console.log(a.recorrido())
 
-// Funcion para instanciar libros, titulo, N de paginas, el año de impresion cuantas paginas se lee por minuto, cuanto se demoraria en leer el libro, de acuerdo a la fecha de impresion si tiene mas de dos años emitir un mensaje de que ese libro ya se debe remplazar, si tiene menos cuanto tiempo de vida utilizar
+// Funcion para instanciar libros, titulo, N de paginas, el año de impresion, cuantas paginas se lee por minuto, cuanto se demoraria en leer el libro, de acuerdo a la fecha de impresion si tiene mas de dos años emitir un mensaje de que ese libro ya se debe remplazar, si tiene menos cuanto tiempo de vida utilizar
 function Libro(titulo, npaginas, año){
     this.titutlo=titulo;
     this.npaginas=npaginas;
     this.año=año;
     this.tiempoL=function(paginamin){
         var tiempo = this.npaginas/paginamin
-        return `Usted tardara ${Math.trunc(tiempo)} minutos en acabar de leer el libro, si lee ${paginamin} paginas por minuto`
+        return `Usted tardara ${Math.trunc(tiempo)} minutos en acabar de leer el libro, si lee ${paginamin} paginas por minuto de ${this.npaginas} paginas que tiene su libro`
     }
 
     this.tiempoV=function(){
@@ -102,5 +102,5 @@ function Libro(titulo, npaginas, año){
 }
 
 var a= new Libro("El imperio final", 541, 2006)
-console.log (a.tiempoL(4))
+console.log (a.tiempoL(2))
 console.log (a.tiempoV())
