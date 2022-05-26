@@ -45,21 +45,22 @@ function mostrarvec(vec, callback){
 vector = []
 principal(vector, mostrarvec)
 
-// Funcion por fuera de
 
+// Segunda funcion callback fuera
 function principal(vec, callback){
     let tam = Math.round(Math.random()*20)
     for (let i = 0; i < tam; i++) {
         vec.push(Math.round(Math.random()*100))
     }
-    function callp(vec){
-        let sum = 0
-        for (let i = 0; i < vec.length; i++) {
-        sum+=vec[i]}
-            return sum;
-    }
     callback(vec, callp);
 
+}
+
+function callp(vec){
+    let sum = 0
+    for (let i = 0; i < vec.length; i++) {
+    sum+=vec[i]}
+        return `La suma de los numeros del arreglo es: ${sum}`;
 }
 
 function mostrarvec(vec, callback){
@@ -69,4 +70,6 @@ function mostrarvec(vec, callback){
 
 vector = []
 principal(vector, mostrarvec)
+
+
 
